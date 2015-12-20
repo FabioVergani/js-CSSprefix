@@ -1,0 +1,6 @@
+(function(vp,np){
+Object.keys(this).filter(function(p){return vp=vp||p.match(/^(Moz|ms)/)}).forEach(function(op){
+    this.__defineGetter__(np=op.replace(vp[0], ""), function() { return this[op] });
+    this.__defineSetter__(np, function(val) { this[op] = val.toString() });
+}, this);
+}).call(CSSStyleDeclaration.prototype);
